@@ -112,6 +112,32 @@ class Users {
     }
 
 
+    public function printTable() {
+
+        $html = '<table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Birthday</th>
+                </tr>
+                <tr>
+                    <td><?php echo getID(); ?></td>
+                    <td><?php echo getFirstName(); ?></td>
+                    <td><?php echo getLastName(); ?></td>
+                    <td><?php echo getPhone(); ?></td>
+                    <td><?php echo getEmail(); ?></td>
+                    <td><?php echo getGender(); ?></td>
+                    <td><?php echo getBirthday(); ?></td>
+                </tr>
+                ';
+        return $html;
+    }
+
+
 
 } //end class
 
