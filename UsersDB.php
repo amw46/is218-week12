@@ -7,7 +7,7 @@ class UsersDB {
 
     public function getUsers() {
 
-        private $db = Database::getDB();
+        $db = Database::getDB();
 
         $query = 'SELECT * FROM accounts';
         $statement = $db->prepare($query);
