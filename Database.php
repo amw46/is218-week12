@@ -12,7 +12,7 @@ class Database
 
     private function __construct() {}
 
-    public function getDB() {
+    public static function getDB() {
 
         if (!isset(self::$db)) { //if database is not set
             try {

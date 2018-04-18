@@ -5,7 +5,7 @@ class UsersDB {
 
     private function __construct() {}
 
-    public function getUsers() {
+    public static function getUsers() {
 
         $users = array();
 
