@@ -16,7 +16,7 @@ class Database
 
         if (!isset(self::$db)) { //if database is not set
             try {
-                $db = new PDO(self::$dsn, self::$username, self::$password);
+                self::$db = new PDO(self::$dsn, self::$username, self::$password);
                 echo '<h2>Connected to the database successfully!</h2>';
 
             } catch (PDOException $error) {
