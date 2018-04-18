@@ -10,6 +10,7 @@ $users = UsersDB::getUsers();
 <html>
 <head>
     <title>Week 12</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
