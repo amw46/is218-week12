@@ -127,15 +127,38 @@ class Users {
         return $html;
         */
 
-        echo "<tr>";
-        echo "<td><?php echo $this->getID(); ?></td>";
-        echo "<td><?php echo $this->getFirstName(); ?></td>";
-        echo "<td><?php echo $this->getLastName(); ?></td>";
-        echo "<td><?php echo $this->getPhone(); ?></td>";
-        echo "<td><?php echo $this->getEmail(); ?></td>";
-        echo "<td><?php echo $this->getGender(); ?></td>";
-        echo "<td><?php echo $this->getBirthday(); ?></td>";
+        $i = $this->getId();
+        $em = $this->getEmail();
+        $f = $this->getFirstName();
+        $l = $this->getLastName();
+        $ph = $this->getPhone();
+        $bd = $this->getBirthday();
+        $g = $this->getGender();
+
         echo '<tr>';
+        echo '<td>';
+        echo $i;
+        echo '</td>';
+        echo '<td>';
+        echo $em;
+        echo '</td>';
+        echo '<td>';
+        echo $f;
+        echo '</td>';
+        echo '<td>';
+        echo $l;
+        echo '</td>';
+        echo '<td>';
+        echo $ph;
+        echo '</td>';
+        echo '<td>';
+        echo $bd;
+        echo '</td>';
+        echo '<td>';
+        echo $g;
+        echo '</td>';
+        echo '</tr>';
+
 
     }
 
