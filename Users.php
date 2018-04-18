@@ -12,103 +12,103 @@ class Users {
     private $password;
 
     public function __construct($id, $em, $fn, $ln, $ph, $bd, $g, $pass) {
-        $this->$id = $id;
-        $this->$email = $em;
-        $this->$fname = $fn;
-        $this->$lname = $ln;
-        $this->$phone = $ph;
-        $this->$birthday = $bd;
-        $this->$gender = $g;
-        $this->$password = $pass;
+        $this->id = $id;
+        $this->email = $em;
+        $this->fname = $fn;
+        $this->lname = $ln;
+        $this->phone = $ph;
+        $this->birthday = $bd;
+        $this->gender = $g;
+        $this->password = $pass;
     }
 
     public function getId() {
 
-        return $this->$id;
+        return $this->id;
     }
 
 
     public function setId($id)
     {
-        $this->$id = $id;
+        $this->id = $id;
     }
 
     //email
     public function getEmail() {
 
-        return $this->$email;
+        return $this->email;
     }
 
 
     public function setEmail($email)
     {
-        $this->$email = $email;
+        $this->email = $email;
     }
 
     public function getFirstName() {
 
-        return $this->$fname;
+        return $this->fname;
     }
 
 
     public function setFirstName($fn)
     {
-        $this->$id = $fn;
+        $this->id = $fn;
     }
 
     public function getLastName() {
 
-        return $this->$lname;
+        return $this->lname;
     }
 
 
     public function setLastName($ln)
     {
-        $this->$lname = $ln;
+        $this->lname = $ln;
     }
 
     public function getPhone() {
 
-        return $this->$phone;
+        return $this->phone;
     }
 
 
     public function setPhone($p)
     {
-        $this->$phone = $p;
+        $this->phone = $p;
     }
 
     public function getBirthday() {
 
-        return $this->$birthday;
+        return $this->birthday;
     }
 
 
     public function setBirthday($bd)
     {
-        $this->$birthday = $bd;
+        $this->birthday = $bd;
     }
 
     public function getGender() {
 
-        return $this->$gender;
+        return $this->gender;
     }
 
 
     public function setGender($gen)
     {
-        $this->$gender = $gen;
+        $this->gender = $gen;
     }
 
     public function getPassword() {
 
-        return $this->$password;
+        return $this->password;
     }
 
 
     public function setPassword($pass)
     {
-        $this->$password = $pass;
+        $this->password = $pass;
     }
 
 
