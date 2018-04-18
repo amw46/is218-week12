@@ -1,4 +1,4 @@
-table {
+th, td, tr {
     border: 1px solid darkblue;
-    padding: 1em;
+    padding: 0.5em;
 }
