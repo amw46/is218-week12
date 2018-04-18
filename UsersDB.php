@@ -1,17 +1,29 @@
 <?php
-$query = 'SELECT * FROM accounts';
-$statement = $db->prepare($query);
-$statement->execute();
-$accts = $statement->fetchAll();
-$statement->closeCursor();
 
-require('users.php');
+
 class UsersDB {
 
-    public static function getUsers() {
-        foreach ($accts as $acct) :
+    private function __construct() {}
 
-        endforeach;
+    public function getUsers() {
+
+        private $db = Database::getDB();
+
+        $query = 'SELECT * FROM accounts';
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $accts = $statement->fetchAll();
+        $statement->closeCursor();
+
+        foreach($accts as $acct) {
+
+            $user = new Users($acct['id'], $acct['email'], $acct['fname'], $acct['lname'], $acct['phone'], $acct['birthday'], $acct['gender'], $acct['password']);
+
+            $users[] = $user;
+         }
+
+        return $users;
+
     }
 
 } //end class

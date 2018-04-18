@@ -11,15 +11,15 @@ class Users {
     private static $gender;
     private static $password;
 
-    public function __construct() {
-        //self::$id = null;
-        //self::$email = null;
-        //self::$fname = null;
-        //self::$lname = null;
-        //self::$phone = null;
-        //self::$birthday = null;
-        //self::$gender = null;
-        //self::$password = null;
+    public function __construct($id, $em, $fn, $ln, $ph, $bd, $g, $pass) {
+        self::$id = $id;
+        self::$email = $em;
+        self::$fname = $fn;
+        self::$lname = $ln;
+        self::$phone = $ph;
+        self::$birthday = $bd;
+        self::$gender = $g;
+        self::$password = $pass;
     }
 
     public function getId() {
