@@ -8,9 +8,12 @@ $users = UsersDB::getUsers();
 ?>
 
 <html>
+<head>
+    <title>Week 12</title>
+</head>
 
 <body>
-<table class="user-table">
+<table>
     <tr>
         <th>ID</th>
         <th>Email Address</th>

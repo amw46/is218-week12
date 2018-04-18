@@ -114,8 +114,7 @@ class Users {
 
     public function printUserRow() {
 
-        $html = '
-                <tr>
+        $html = '<tr>
                     <td><?php echo getID(); ?></td>
                     <td><?php echo getFirstName(); ?></td>
                     <td><?php echo getLastName(); ?></td>
