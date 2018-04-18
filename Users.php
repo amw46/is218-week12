@@ -114,6 +114,7 @@ class Users {
 
     public function printUserRow() {
 
+        /*
         $html = "<tr>
                     <td><?php echo $this->getID(); ?></td>
                     <td><?php echo $this->getFirstName(); ?></td>
@@ -124,6 +125,18 @@ class Users {
                     <td><?php echo $this->getBirthday(); ?></td>
                 </tr>";
         return $html;
+        */
+
+        echo "<tr>";
+        echo "<td><?php echo $this->getID(); ?></td>";
+        echo "<td><?php echo $this->getFirstName(); ?></td>";
+        echo "<td><?php echo $this->getLastName(); ?></td>";
+        echo "<td><?php echo $this->getPhone(); ?></td>";
+        echo "<td><?php echo $this->getEmail(); ?></td>";
+        echo "<td><?php echo $this->getGender(); ?></td>";
+        echo "<td><?php echo $this->getBirthday(); ?></td>";
+        echo '<tr>';
+
     }
 
 
