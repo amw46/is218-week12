@@ -114,16 +114,15 @@ class Users {
 
     public function printUserRow() {
 
-        $html = '<tr>
-                    <td><?php echo getID(); ?></td>
-                    <td><?php echo getFirstName(); ?></td>
-                    <td><?php echo getLastName(); ?></td>
-                    <td><?php echo getPhone(); ?></td>
-                    <td><?php echo getEmail(); ?></td>
-                    <td><?php echo getGender(); ?></td>
-                    <td><?php echo getBirthday(); ?></td>
-                </tr>
-                ';
+        $html = "<tr>
+                    <td><?php echo $this->getID(); ?></td>
+                    <td><?php echo $this->getFirstName(); ?></td>
+                    <td><?php echo $this->getLastName(); ?></td>
+                    <td><?php echo $this->getPhone(); ?></td>
+                    <td><?php echo $this->getEmail(); ?></td>
+                    <td><?php echo $this->getGender(); ?></td>
+                    <td><?php echo $this->getBirthday(); ?></td>
+                </tr>";
         return $html;
     }
 
