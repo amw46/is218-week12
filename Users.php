@@ -112,18 +112,9 @@ class Users {
     }
 
 
-    public function printTable() {
+    public function printUserRow() {
 
-        $html = '<table border="1">
-                <tr>
-                    <th>ID</th>
-                    <th>First name</th>
-                    <th>Last name</th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                    <th>Gender</th>
-                    <th>Birthday</th>
-                </tr>
+        $html = '
                 <tr>
                     <td><?php echo getID(); ?></td>
                     <td><?php echo getFirstName(); ?></td>

@@ -1,53 +1,30 @@
 <?php
+require_once('database.php');
+require_once('users_db.php');
+require_once('user.php');
 
-	$username = 'amw46';
-	$password = 'FzLRiQH3';
-	$hostname = 'sql2.njit.edu';
-
-
-	$dsn = "mysql:host=$hostname;dbname=$username";
-
-
-
-	try {
-		$db = new PDO($dsn, $username, $password);
-		echo '<h2>Connected to the database successfully!</h2>';
-
-	} catch (PDOException $error) {
-		echo '<h3>Database Error</h3>';
-		echo $error->getMessage().'<br>';
-		exit(); //exit the program
-	} catch (Exception $e) {
-		echo '<h3>Generic Error</h3>';
-		echo $e->getMessage().'<br>';
-		exit();
-
-	} //end try
-
-
-	$query = 'SELECT * FROM accounts WHERE id < :id';
-	$statement = $db->prepare($query);
-	$statement->bindValue(':id', 6);
-	$statement->execute();
-	$accts = $statement->fetchAll();
-	$statement->closeCursor();
+$users = UsersDB::getUsers();
 
 ?>
 
-<table border="1">
-<tr>
-  <th>First name</th>
-  <th>Last name</th>
-</tr>
-<?php foreach ($accts as $acct) : ?>
-<?php $count; ?>
-<tr>
-<td><?php echo $acct['fname']; ?></td>
-<td><?php echo $acct['lname']; ?> </td>
-</tr>
-<?php $count++; ?>
+<html>
 
-<?php endforeach; ?>
+<body>
+<table class="user-table">
+    <tr>
+        <th>ID</th>
+        <th>Email Address</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+        <th>Birthday</th>
+        <th>Gender</th>
+    </tr>
+    <?php foreach ($users as $user) : ?>
+        <?php echo $user->printUserRow(); ?>
+    <?php endforeach; ?>
 </table>
+</body>
 
-<?php echo '<br><strong>'.$count.' records displayed</strong>' ?>
+
+</html>
