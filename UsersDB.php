@@ -7,6 +7,8 @@ class UsersDB {
 
     public function getUsers() {
 
+        $users = array();
+
         $db = Database::getDB();
 
         $query = 'SELECT * FROM accounts';
