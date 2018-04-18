@@ -1,7 +1,7 @@
 <?php
-require_once('database.php');
-require_once('users_db.php');
-require_once('user.php');
+require_once('Database.php');
+require_once('UsersDB.php');
+require_once('Users.php');
 
 $users = UsersDB::getUsers();
 
