@@ -2,113 +2,113 @@
 
 class Users {
 
-    private static $id;
-    private static $email;
-    private static $fname;
-    private static $lname;
-    private static $phone;
-    private static $birthday;
-    private static $gender;
-    private static $password;
+    private $id;
+    private $email;
+    private $fname;
+    private $lname;
+    private $phone;
+    private $birthday;
+    private $gender;
+    private $password;
 
     public function __construct($id, $em, $fn, $ln, $ph, $bd, $g, $pass) {
-        self::$id = $id;
-        self::$email = $em;
-        self::$fname = $fn;
-        self::$lname = $ln;
-        self::$phone = $ph;
-        self::$birthday = $bd;
-        self::$gender = $g;
-        self::$password = $pass;
+        $this->$id = $id;
+        $this->$email = $em;
+        $this->$fname = $fn;
+        $this->$lname = $ln;
+        $this->$phone = $ph;
+        $this->$birthday = $bd;
+        $this->$gender = $g;
+        $this->$password = $pass;
     }
 
     public function getId() {
 
-        return self::$id;
+        return $this->$id;
     }
 
 
     public function setId($id)
     {
-        self::$id = $id;
+        $this->$id = $id;
     }
 
     //email
     public function getEmail() {
 
-        return self::$email;
+        return $this->$email;
     }
 
 
     public function setEmail($email)
     {
-        self::$email = $email;
+        $this->$email = $email;
     }
 
     public function getFirstName() {
 
-        return self::$fname;
+        return $this->$fname;
     }
 
 
     public function setFirstName($fn)
     {
-        self::$id = $fn;
+        $this->$id = $fn;
     }
 
     public function getLastName() {
 
-        return self::$lname;
+        return $this->$lname;
     }
 
 
     public function setLastName($ln)
     {
-        self::$lname = $ln;
+        $this->$lname = $ln;
     }
 
     public function getPhone() {
 
-        return self::$phone;
+        return $this->$phone;
     }
 
 
     public function setPhone($p)
     {
-        self::$phone = $p;
+        $this->$phone = $p;
     }
 
     public function getBirthday() {
 
-        return self::$birthday;
+        return $this->$birthday;
     }
 
 
     public function setBirthday($bd)
     {
-        self::$birthday = $bd;
+        $this->$birthday = $bd;
     }
 
     public function getGender() {
 
-        return self::$gender;
+        return $this->$gender;
     }
 
 
     public function setGender($gen)
     {
-        self::$gender = $gen;
+        $this->$gender = $gen;
     }
 
     public function getPassword() {
 
-        return self::$password;
+        return $this->$password;
     }
 
 
     public function setPassword($pass)
     {
-        self::$password = $pass;
+        $this->$password = $pass;
     }
 
 
